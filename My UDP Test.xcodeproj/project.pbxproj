@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C15389511DDC8B3000F4E347 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = C15389501DDC8B3000F4E347 /* yudpsocket.c */; };
 		D8270EBF1DD30B8F002F5789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8270EBE1DD30B8F002F5789 /* AppDelegate.swift */; };
 		D8270EC11DD30B8F002F5789 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8270EC01DD30B8F002F5789 /* ViewController.swift */; };
 		D8270EC41DD30B8F002F5789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8270EC21DD30B8F002F5789 /* Main.storyboard */; };
 		D8270EC61DD30B8F002F5789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8270EC51DD30B8F002F5789 /* Assets.xcassets */; };
 		D8270EC91DD30B8F002F5789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8270EC71DD30B8F002F5789 /* LaunchScreen.storyboard */; };
+		D8270ED21DD30BE8002F5789 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8270ED11DD30BE8002F5789 /* ysocket.swift */; };
+		D8270ED41DD30C5C002F5789 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8270ED31DD30C5C002F5789 /* yudpsocket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C15389501DDC8B3000F4E347 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yudpsocket.c; path = ../../../yudpsocket.c; sourceTree = "<group>"; };
 		D8270EBB1DD30B8F002F5789 /* My UDP Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My UDP Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8270EBE1DD30B8F002F5789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8270EC01DD30B8F002F5789 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,9 @@
 		D8270EC51DD30B8F002F5789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8270EC81DD30B8F002F5789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8270ECA1DD30B8F002F5789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8270ED11DD30BE8002F5789 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		D8270ED31DD30C5C002F5789 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		D8270ED51DD30EBF002F5789 /* My UDP Test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My UDP Test-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 		D8270EBD1DD30B8F002F5789 /* My UDP Test */ = {
 			isa = PBXGroup;
 			children = (
+				D8270ED01DD30BA5002F5789 /* Socket */,
 				D8270EBE1DD30B8F002F5789 /* AppDelegate.swift */,
 				D8270EC01DD30B8F002F5789 /* ViewController.swift */,
 				D8270EC21DD30B8F002F5789 /* Main.storyboard */,
@@ -62,6 +70,17 @@
 				D8270ECA1DD30B8F002F5789 /* Info.plist */,
 			);
 			path = "My UDP Test";
+			sourceTree = "<group>";
+		};
+		D8270ED01DD30BA5002F5789 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				C15389501DDC8B3000F4E347 /* yudpsocket.c */,
+				D8270ED11DD30BE8002F5789 /* ysocket.swift */,
+				D8270ED31DD30C5C002F5789 /* yudpsocket.swift */,
+				D8270ED51DD30EBF002F5789 /* My UDP Test-Bridging-Header.h */,
+			);
+			name = Socket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +115,8 @@
 				TargetAttributes = {
 					D8270EBA1DD30B8F002F5789 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = ZDL2MULWVU;
+						DevelopmentTeam = C6U8L66NQF;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,7 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8270ED21DD30BE8002F5789 /* ysocket.swift in Sources */,
+				C15389511DDC8B3000F4E347 /* yudpsocket.c in Sources */,
 				D8270EC11DD30B8F002F5789 /* ViewController.swift in Sources */,
+				D8270ED41DD30C5C002F5789 /* yudpsocket.swift in Sources */,
 				D8270EBF1DD30B8F002F5789 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,11 +282,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZDL2MULWVU;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = C6U8L66NQF;
 				INFOPLIST_FILE = "My UDP Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "tw.com.code-desire.My-UDP-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "idv.remote-light-control.demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "My UDP Test/My UDP Test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,11 +299,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZDL2MULWVU;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = C6U8L66NQF;
 				INFOPLIST_FILE = "My UDP Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "tw.com.code-desire.My-UDP-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "idv.remote-light-control.demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "My UDP Test/My UDP Test-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -300,6 +330,7 @@
 				D8270ECF1DD30B8F002F5789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
